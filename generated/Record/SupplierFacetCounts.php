@@ -2,15 +2,15 @@
 
 namespace Myrzan\TecDocClient\Generated\Record;
 
-use Myrzan\TecDocClient\Generated\Record\DataSupplierFacetCount;
+use Myrzan\TecDocClient\Generated\Record\SupplierFacetCount;
 
 /**
  * Class representing DataSupplierFacetCountsType
  *
- * 
+ *
  * XSD Type: DataSupplierFacetCounts
  */
-class DataSupplierFacetCounts
+class SupplierFacetCounts
 {
 
     /**
@@ -21,10 +21,10 @@ class DataSupplierFacetCounts
     private $total = null;
 
     /**
-     * @var DataSupplierFacetCount[] $counts
+     * @var SupplierFacetCount[] $counts
      */
     private $counts = [
-        
+
     ];
 
     /**
@@ -56,10 +56,10 @@ class DataSupplierFacetCounts
     /**
      * Adds as counts
      *
-     * @param DataSupplierFacetCount $counts
+     * @param SupplierFacetCount $counts
      * @return self
      */
-    public function addToCounts(DataSupplierFacetCount $counts)
+    public function addToCounts(SupplierFacetCount $counts)
     {
         $this->counts[] = $counts;
         return $this;
@@ -90,7 +90,7 @@ class DataSupplierFacetCounts
     /**
      * Gets as counts
      *
-     * @return DataSupplierFacetCount[]
+     * @return SupplierFacetCount[]
      */
     public function getCounts()
     {
@@ -100,7 +100,7 @@ class DataSupplierFacetCounts
     /**
      * Sets a new counts
      *
-     * @param DataSupplierFacetCount[] $counts
+     * @param SupplierFacetCount[] $counts
      * @return self
      */
     public function setCounts(array $counts)

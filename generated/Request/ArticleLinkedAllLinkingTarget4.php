@@ -8,7 +8,7 @@ namespace Myrzan\TecDocClient\Generated\Request;
  * 
  * XSD Type: articleLinkedAllLinkingTarget4Request
  */
-class GetArticleLinkedAllLinkingTarget4
+class ArticleLinkedAllLinkingTarget4
 {
 
     /**
