@@ -25,4 +25,24 @@ class DescriptionFacet
     {
         return $this->counts;
     }
+
+    /**
+     * @param int $total
+     * @return DescriptionFacet
+     */
+    public function setTotal(int $total): DescriptionFacet
+    {
+        $this->total = $total;
+        return $this;
+    }
+
+    /**
+     * @param array $counts
+     * @return DescriptionFacet
+     */
+    public function setCounts(array $counts): DescriptionFacet
+    {
+        $this->counts = $counts;
+        return $this;
+    }
 }

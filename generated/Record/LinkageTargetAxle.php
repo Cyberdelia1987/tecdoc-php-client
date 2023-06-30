@@ -74,4 +74,74 @@ class LinkageTargetAxle
     {
         return $this->vehicleModelSeriesName;
     }
+
+    /**
+     * @param int $id
+     * @return LinkageTargetAxle
+     */
+    public function setId(int $id): LinkageTargetAxle
+    {
+        $this->id = $id;
+        return $this;
+    }
+
+    /**
+     * @param int $description
+     * @return LinkageTargetAxle
+     */
+    public function setDescription(int $description): LinkageTargetAxle
+    {
+        $this->description = $description;
+        return $this;
+    }
+
+    /**
+     * @param int $mfrId
+     * @return LinkageTargetAxle
+     */
+    public function setMfrId(int $mfrId): LinkageTargetAxle
+    {
+        $this->mfrId = $mfrId;
+        return $this;
+    }
+
+    /**
+     * @param int $mfrName
+     * @return LinkageTargetAxle
+     */
+    public function setMfrName(int $mfrName): LinkageTargetAxle
+    {
+        $this->mfrName = $mfrName;
+        return $this;
+    }
+
+    /**
+     * @param int $mfrShortName
+     * @return LinkageTargetAxle
+     */
+    public function setMfrShortName(int $mfrShortName): LinkageTargetAxle
+    {
+        $this->mfrShortName = $mfrShortName;
+        return $this;
+    }
+
+    /**
+     * @param int|null $vehicleModelSeriesId
+     * @return LinkageTargetAxle
+     */
+    public function setVehicleModelSeriesId(?int $vehicleModelSeriesId): LinkageTargetAxle
+    {
+        $this->vehicleModelSeriesId = $vehicleModelSeriesId;
+        return $this;
+    }
+
+    /**
+     * @param int|null $vehicleModelSeriesName
+     * @return LinkageTargetAxle
+     */
+    public function setVehicleModelSeriesName(?int $vehicleModelSeriesName): LinkageTargetAxle
+    {
+        $this->vehicleModelSeriesName = $vehicleModelSeriesName;
+        return $this;
+    }
 }

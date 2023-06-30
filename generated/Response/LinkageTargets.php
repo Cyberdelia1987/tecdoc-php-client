@@ -130,4 +130,103 @@ class LinkageTargets
         return $this->statusText;
     }
 
+    /**
+     * @param int $total
+     * @return LinkageTargets
+     */
+    public function setTotal(int $total): LinkageTargets
+    {
+        $this->total = $total;
+        return $this;
+    }
+
+    /**
+     * @param array $linkageTargets
+     * @return LinkageTargets
+     */
+    public function setLinkageTargets(array $linkageTargets): LinkageTargets
+    {
+        $this->linkageTargets = $linkageTargets;
+        return $this;
+    }
+
+    /**
+     * @param array $mfrFacets
+     * @return LinkageTargets
+     */
+    public function setMfrFacets(array $mfrFacets): LinkageTargets
+    {
+        $this->mfrFacets = $mfrFacets;
+        return $this;
+    }
+
+    /**
+     * @param array $vehicleModelSeriesFacets
+     * @return LinkageTargets
+     */
+    public function setVehicleModelSeriesFacets(array $vehicleModelSeriesFacets): LinkageTargets
+    {
+        $this->vehicleModelSeriesFacets = $vehicleModelSeriesFacets;
+        return $this;
+    }
+
+    /**
+     * @param array $hmdModelFacets
+     * @return LinkageTargets
+     */
+    public function setHmdModelFacets(array $hmdModelFacets): LinkageTargets
+    {
+        $this->hmdModelFacets = $hmdModelFacets;
+        return $this;
+    }
+
+    /**
+     * @param array $yearFacets
+     * @return LinkageTargets
+     */
+    public function setYearFacets(array $yearFacets): LinkageTargets
+    {
+        $this->yearFacets = $yearFacets;
+        return $this;
+    }
+
+    /**
+     * @param array $descriptionFacets
+     * @return LinkageTargets
+     */
+    public function setDescriptionFacets(array $descriptionFacets): LinkageTargets
+    {
+        $this->descriptionFacets = $descriptionFacets;
+        return $this;
+    }
+
+    /**
+     * @param array $linkageTargetTypeFacets
+     * @return LinkageTargets
+     */
+    public function setLinkageTargetTypeFacets(array $linkageTargetTypeFacets): LinkageTargets
+    {
+        $this->linkageTargetTypeFacets = $linkageTargetTypeFacets;
+        return $this;
+    }
+
+    /**
+     * @param int $status
+     * @return LinkageTargets
+     */
+    public function setStatus(int $status): LinkageTargets
+    {
+        $this->status = $status;
+        return $this;
+    }
+
+    /**
+     * @param string $statusText
+     * @return LinkageTargets
+     */
+    public function setStatusText(string $statusText): LinkageTargets
+    {
+        $this->statusText = $statusText;
+        return $this;
+    }
 }

@@ -13,4 +13,14 @@ class VehicleDataByVINExt
     {
         return $this->response;
     }
+
+    /**
+     * @param string $response
+     * @return VehicleDataByVINExt
+     */
+    public function setResponse(string $response): VehicleDataByVINExt
+    {
+        $this->response = $response;
+        return $this;
+    }
 }
