@@ -5,7 +5,7 @@ namespace Myrzan\TecDocClient\Generated\Response;
 use Myrzan\TecDocClient\Generated\Record\Article;
 use Myrzan\TecDocClient\Generated\Record\AssemblyGroupFacetCounts;
 use Myrzan\TecDocClient\Generated\Record\CriteriaFacetCounts;
-use Myrzan\TecDocClient\Generated\Record\DataSupplierFacetCounts;
+use Myrzan\TecDocClient\Generated\Record\SupplierFacetCounts;
 use Myrzan\TecDocClient\Generated\Record\GenericArticleFacetCounts;
 
 /**
@@ -16,7 +16,6 @@ use Myrzan\TecDocClient\Generated\Record\GenericArticleFacetCounts;
  */
 class ArticlesResponse
 {
-
     /**
      * The total number of parts that match this query
      *
@@ -39,7 +38,7 @@ class ArticlesResponse
     ];
 
     /**
-     * @var DataSupplierFacetCounts $dataSupplierFacets
+     * @var SupplierFacetCounts $dataSupplierFacets
      */
     private $dataSupplierFacets = null;
 
@@ -179,7 +178,7 @@ class ArticlesResponse
     /**
      * Gets as dataSupplierFacets
      *
-     * @return DataSupplierFacetCounts
+     * @return SupplierFacetCounts
      */
     public function getDataSupplierFacets()
     {
@@ -189,10 +188,10 @@ class ArticlesResponse
     /**
      * Sets a new dataSupplierFacets
      *
-     * @param DataSupplierFacetCounts $dataSupplierFacets
+     * @param SupplierFacetCounts $dataSupplierFacets
      * @return self
      */
-    public function setDataSupplierFacets(DataSupplierFacetCounts $dataSupplierFacets)
+    public function setDataSupplierFacets(SupplierFacetCounts $dataSupplierFacets)
     {
         $this->dataSupplierFacets = $dataSupplierFacets;
         return $this;

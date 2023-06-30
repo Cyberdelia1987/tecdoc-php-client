@@ -3,19 +3,18 @@
 namespace Myrzan\TecDocClient\Generated\Response;
 
 use Myrzan\TecDocClient\Generated\Record\AssemblyGroupFacetCounts;
-use Myrzan\TecDocClient\Generated\Record\DataSupplierFacetCounts;
+use Myrzan\TecDocClient\Generated\Record\SupplierFacetCounts;
 use Myrzan\TecDocClient\Generated\Record\GenericArticleFacetCounts;
 use Myrzan\TecDocClient\Generated\Record\OEArticle;
 
 /**
  * Class representing OEArticlesByVINResponse
  *
- * 
+ *
  * XSD Type: oEArticlesByVINResponse
  */
 class OEArticlesByVINResponse
 {
-
     /**
      * The total number of oe parts that match this query
      *
@@ -26,12 +25,10 @@ class OEArticlesByVINResponse
     /**
      * @var OEArticle[] $oeArticles
      */
-    private $oeArticles = [
-        
-    ];
+    private $oeArticles = [];
 
     /**
-     * @var DataSupplierFacetCounts $aftermarketDataSupplierFacets
+     * @var SupplierFacetCounts $aftermarketDataSupplierFacets
      */
     private $aftermarketDataSupplierFacets = null;
 
@@ -140,7 +137,7 @@ class OEArticlesByVINResponse
     /**
      * Gets as aftermarketDataSupplierFacets
      *
-     * @return DataSupplierFacetCounts
+     * @return SupplierFacetCounts
      */
     public function getAftermarketDataSupplierFacets()
     {
@@ -150,10 +147,10 @@ class OEArticlesByVINResponse
     /**
      * Sets a new aftermarketDataSupplierFacets
      *
-     * @param DataSupplierFacetCounts $aftermarketDataSupplierFacets
+     * @param SupplierFacetCounts $aftermarketDataSupplierFacets
      * @return self
      */
-    public function setAftermarketDataSupplierFacets(DataSupplierFacetCounts $aftermarketDataSupplierFacets)
+    public function setAftermarketDataSupplierFacets(SupplierFacetCounts $aftermarketDataSupplierFacets)
     {
         $this->aftermarketDataSupplierFacets = $aftermarketDataSupplierFacets;
         return $this;

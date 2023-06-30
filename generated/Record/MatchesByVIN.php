@@ -14,17 +14,17 @@ class MatchesByVIN
     /**
      * @var MatchingManufacturersByVIN[] $matchingManufacturers
      */
-    private $matchingManufacturers = null;
+    private $matchingManufacturers = [];
 
     /**
      * @var MatchingVehicleModelSeriesByVIN[] $matchingModels
      */
-    private $matchingModels = null;
+    private $matchingModels = [];
 
     /**
      * @var MatchingVehicleIdsByVIN[] $matchingVehicles
      */
-    private $matchingVehicles = null;
+    private $matchingVehicles = [];
 
     /**
      * @var int $matchingVehiclesCount

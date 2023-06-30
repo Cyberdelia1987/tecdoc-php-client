@@ -18,76 +18,66 @@ class GetArticles
     /**
      * @var string $articleCountry
      */
-    private $articleCountry = null;
+    private ?string $articleCountry = null;
 
     /**
      * Your assigned TecDoc Provider Id
      *
      * @var int $provider
      */
-    private $provider = null;
+    private ?int $provider = null;
 
     /**
      * @var string $searchQuery
      */
-    private $searchQuery = null;
+    private ?string $searchQuery = null;
 
     /**
      * 0: Article Number (DEFAULT), 1: OE Number, 2: Trade Number, 3: Comparable Number, 4: Replacement Number, 5: Replaced Number, 6: EAN Number, 7: Criteria Number, 10: Any Number, 99: Free Text
      *
      * @var int $searchType
      */
-    private $searchType = null;
+    private ?int $searchType = null;
 
     /**
      * exact: Exact Match (DEFAULT), prefix: Prefix Match, suffix: Suffix Match, prefix_or_suffix: Prefix or Suffix Matching
      *
      * @var string $searchMatchType
      */
-    private $searchMatchType = null;
+    private ?string $searchMatchType = null;
 
     /**
      * Only return parts matching these legacy article ids
      *
      * @var int[] $legacyArticleIds
      */
-    private $legacyArticleIds = [
-        
-    ];
+    private array $legacyArticleIds = [];
 
     /**
      * Only return parts that belong to these data supplier ids
      *
      * @var int[] $dataSupplierIds
      */
-    private $dataSupplierIds = [
-        
-    ];
+    private $dataSupplierIds = [];
 
     /**
      * Only return parts that belong to these generic article
      *
      * @var int[] $genericArticleIds
      */
-    private $genericArticleIds = [
-        
-    ];
+    private $genericArticleIds = [];
 
     /**
      * Only return parts that belong to these assembly group nodes
      *
      * @var int[] $assemblyGroupNodeIds
      */
-    private $assemblyGroupNodeIds = [
-        
-    ];
+    private $assemblyGroupNodeIds = [];
 
     /**
      * @var CriteriaFilter[] $criteriaFilters
      */
-    private $criteriaFilters = [
-        
-    ];
+    private $criteriaFilters = [];
 
     /**
      * Filter to parts that are linked to this target id (also requires the linkingTargetType)
@@ -183,9 +173,7 @@ class GetArticles
     /**
      * @var Sort[] $sort
      */
-    private $sort = [
-        
-    ];
+    private $sort = [];
 
     /**
      * Include ALL Data in the response. Defaults to false.
@@ -1682,7 +1670,5 @@ class GetArticles
         $this->includePrices = $includePrices;
         return $this;
     }
-
-
 }
 

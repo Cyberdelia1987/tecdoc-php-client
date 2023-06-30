@@ -4,22 +4,58 @@ namespace Myrzan\TecDocClient;
 
 use GuzzleHttp\Client as GuzzleClient;
 use JsonMapper;
-use Myrzan\TecDocClient\Generated\Request\GetArticleLinkedAllLinkingTarget4;
-use Myrzan\TecDocClient\Generated\Response\ArticleLinkedAllLinkingTarget4Response;
+use Myrzan\TecDocClient\Generated\Request\AddDynamicAddress;
+use Myrzan\TecDocClient\Generated\Request\AddDynamicAPIKey;
+use Myrzan\TecDocClient\Generated\Request\ArticleLinkedAllLinkingTarget3;
+use Myrzan\TecDocClient\Generated\Request\ArticleLinkedAllLinkingTarget4;
+use Myrzan\TecDocClient\Generated\Request\ArticleLinkedAllLinkingTargetManufacturer;
+use Myrzan\TecDocClient\Generated\Request\ArticleLinkedAllLinkingTargetManufacturer2;
+use Myrzan\TecDocClient\Generated\Request\AutoCompleteSuggestions;
+use Myrzan\TecDocClient\Generated\Request\ChildNodesPattern;
+use Myrzan\TecDocClient\Generated\Request\ChildNodesPattern2;
+use Myrzan\TecDocClient\Generated\Request\Countries;
+use Myrzan\TecDocClient\Generated\Request\CountryGroups;
+use Myrzan\TecDocClient\Generated\Request\CriteriaDialogAttributs;
 use Myrzan\TecDocClient\Generated\Request\GetArticleLinkedAllLinkingTargetsByIds3;
-use Myrzan\TecDocClient\Generated\Response\ArticleLinkedAllLinkingTargetsByIds3Response;
-use Myrzan\TecDocClient\Generated\Request\GetAmBrands;
-use Myrzan\TecDocClient\Generated\Request\GetArticleDirectSearchAllNumbersWithState;
 use Myrzan\TecDocClient\Generated\Request\GetArticles;
 use Myrzan\TecDocClient\Generated\Request\GetBrands;
 use Myrzan\TecDocClient\Generated\Request\GetLanguages;
-use Myrzan\TecDocClient\Generated\Request\GetVehicleByIds3;
-use Myrzan\TecDocClient\Generated\Response\AmBrandsResponse;
-use Myrzan\TecDocClient\Generated\Response\ArticleDirectSearchAllNumbersWithStateResponse;
+use Myrzan\TecDocClient\Generated\Request\GetLinkageTargets;
+use Myrzan\TecDocClient\Generated\Request\GetOEArticlesByVIN;
+use Myrzan\TecDocClient\Generated\Request\GetPartsByVINExt;
+use Myrzan\TecDocClient\Generated\Request\GetShortCuts2;
+use Myrzan\TecDocClient\Generated\Request\GetVehicleDataByVINExt;
+use Myrzan\TecDocClient\Generated\Request\GetVehiclesByKeyNumberPlates;
+use Myrzan\TecDocClient\Generated\Request\GetVehiclesByVIN;
+use Myrzan\TecDocClient\Generated\Request\GetVendorIds2;
+use Myrzan\TecDocClient\Generated\Request\GetVersionRequest;
+use Myrzan\TecDocClient\Generated\Request\KeyValues;
+use Myrzan\TecDocClient\Generated\Response\ArticleLinkedAllLinkingTarget3Response;
+use Myrzan\TecDocClient\Generated\Response\ArticleLinkedAllLinkingTarget4Response;
+use Myrzan\TecDocClient\Generated\Response\ArticleLinkedAllLinkingTargetManufacturer2Response;
+use Myrzan\TecDocClient\Generated\Response\ArticleLinkedAllLinkingTargetManufacturerResponse;
+use Myrzan\TecDocClient\Generated\Response\ArticleLinkedAllLinkingTargetsByIds3Response;
 use Myrzan\TecDocClient\Generated\Response\ArticlesResponse;
+use Myrzan\TecDocClient\Generated\Response\AutoCompleteSuggestionsResponse;
 use Myrzan\TecDocClient\Generated\Response\BrandsResponse;
+use Myrzan\TecDocClient\Generated\Response\ChildNodesPattern2Response;
+use Myrzan\TecDocClient\Generated\Response\ChildNodesPatternResponse;
+use Myrzan\TecDocClient\Generated\Response\CountriesResponse;
+use Myrzan\TecDocClient\Generated\Response\CountryGroupsResponse;
+use Myrzan\TecDocClient\Generated\Response\CriteriaDialogAttributsResponse;
+use Myrzan\TecDocClient\Generated\Response\DynamicAddressResponse;
+use Myrzan\TecDocClient\Generated\Response\DynamicAPIKeyResponse;
+use Myrzan\TecDocClient\Generated\Response\KeyValuesResponse;
 use Myrzan\TecDocClient\Generated\Response\LanguagesResponse;
-use Myrzan\TecDocClient\Generated\Response\VehicleByIds3Response;
+use Myrzan\TecDocClient\Generated\Response\LinkageTargets;
+use Myrzan\TecDocClient\Generated\Response\OEArticlesByVINResponse;
+use Myrzan\TecDocClient\Generated\Response\PartsByVINExt;
+use Myrzan\TecDocClient\Generated\Response\ShortCuts2Response;
+use Myrzan\TecDocClient\Generated\Response\VehicleDataByVINExt;
+use Myrzan\TecDocClient\Generated\Response\VehiclesByKeyNumberPlatesResponse;
+use Myrzan\TecDocClient\Generated\Response\VehiclesByVINResponse;
+use Myrzan\TecDocClient\Generated\Response\VendorIds2Response;
+use Myrzan\TecDocClient\Generated\Response\VersionResponse;
 use ReflectionClass;
 use ReflectionObject;
 use RuntimeException;
@@ -54,40 +90,52 @@ class Client
         $this->apiKey = $apiKey;
     }
 
-    public function getLanguages(GetLanguages $paramsObject): LanguagesResponse
+    /**
+     * @param AddDynamicAddress $req
+     * @return DynamicAddressResponse
+     */
+    public function addDynamicAddress(AddDynamicAddress $req): DynamicAddressResponse
     {
-        $json = $this->call('getLanguages', $paramsObject);
-        return $this->mapJsonToObject($json, new LanguagesResponse());
-    }
-
-    public function getBrands(GetBrands $req): BrandsResponse
-    {
-        $json = $this->call('getBrands', $req);
-        return $this->mapJsonToObject($json, new BrandsResponse());
+        $json = $this->call('addDynamicAddress', $req);
+        return $this->mapJsonToObject($json, new DynamicAddressResponse());
     }
 
     /**
-     * @param GetAmBrands $paramsObject
-     * @return AmBrandsResponse
-     * @deprecated
+     * @param AddDynamicAPIKey $req
+     * @return DynamicAPIKeyResponse
      */
-    public function getAmBrands(GetAmBrands $paramsObject): AmBrandsResponse
+    public function addDynamicAPIKey(AddDynamicAPIKey $req): DynamicAPIKeyResponse
     {
-        $json = $this->call('getAmBrands', $paramsObject);
-        return $this->mapJsonToObject($json, new AmBrandsResponse());
+        $json = $this->call('addDynamicAPIKey', $req);
+        return $this->mapJsonToObject($json, new DynamicAPIKeyResponse());
     }
 
-    public function getArticles(GetArticles $paramsObject): ArticlesResponse
+    public function getArticleLinkedAllLinkingTarget3(ArticleLinkedAllLinkingTarget3 $req): ArticleLinkedAllLinkingTarget3Response
     {
-        $json = $this->call('getArticles', $paramsObject);
-        return $this->mapJsonToObject($json, new ArticlesResponse());
+        $json = $this->call('getArticleLinkedAllLinkingTarget3', $req);
+        return $this->mapJsonToObject($json, new ArticleLinkedAllLinkingTarget3Response());
     }
 
-    public function getVehicleByIds3(GetVehicleByIds3 $paramsObject): VehicleByIds3Response
+    public function getArticleLinkedAllLinkingTarget4(ArticleLinkedAllLinkingTarget4 $req): ArticleLinkedAllLinkingTarget4Response
     {
-        Client::addIntermediatePropNamedArray($paramsObject, 'carIds');
-        $json = $this->call('getVehicleByIds3', $paramsObject);
-        return $this->mapJsonToObject($json, new VehicleByIds3Response());
+        $json = $this->call('getArticleLinkedAllLinkingTarget4', $req);
+        // Handle empty API result with invalid property value
+        if (sizeof($json->data) == 1 and is_string($json->data[0]->articleLinkages)) {
+            $json->data = [];
+        }
+        return $this->mapJsonToObject($json, new ArticleLinkedAllLinkingTarget4Response());
+    }
+
+    public function getArticleLinkedAllLinkingTargetManufacturer(ArticleLinkedAllLinkingTargetManufacturer $req): ArticleLinkedAllLinkingTargetManufacturerResponse
+    {
+        $json = $this->call('getArticleLinkedAllLinkingTargetManufacturer', $req);
+        return $this->mapJsonToObject($json, new ArticleLinkedAllLinkingTargetManufacturerResponse());
+    }
+
+    public function getArticleLinkedAllLinkingTargetManufacturer2(ArticleLinkedAllLinkingTargetManufacturer2 $req): ArticleLinkedAllLinkingTargetManufacturer2Response
+    {
+        $json = $this->call('getArticleLinkedAllLinkingTargetManufacturer2', $req);
+        return $this->mapJsonToObject($json, new ArticleLinkedAllLinkingTargetManufacturer2Response());
     }
 
     public function getArticleLinkedAllLinkingTargetsByIds3(GetArticleLinkedAllLinkingTargetsByIds3 $paramsObject): ArticleLinkedAllLinkingTargetsByIds3Response
@@ -97,23 +145,147 @@ class Client
         return $this->mapJsonToObject($json, new ArticleLinkedAllLinkingTargetsByIds3Response());
     }
 
-    public function getArticleLinkedAllLinkingTarget4(GetArticleLinkedAllLinkingTarget4 $paramsObject): ArticleLinkedAllLinkingTarget4Response
+    /**
+     * @param GetArticles $req
+     * @return ArticlesResponse
+     * @replaces
+     *  - getArticleAccessoryList4
+     *  - getArticleDirectSearchAllNumbersWithState
+     *  - getArticleIdsWithState
+     *  - getArticlePartList
+     *  - getAssignedArticlesByIds4
+     *  - getAssignedArticlesByIds6
+     *  - getAssignedArticlesByIds7
+     *  - getChildNodesAllLinkingTarget2
+     *  - getCriteria2
+     *  - getDirectArticlesByIds4
+     *  - getDirectArticlesByIds6
+     *  - getDirectArticlesByIds7
+     *  - getGenericArticles
+     *  - getGenericArticlesByManufacturer6
+     *  - getGenericArticlesByManufacturer7
+     *  - getLinkedArticles
+     *  - getLinkedBrands
+     */
+    public function getArticles(GetArticles $req): ArticlesResponse
     {
-        $json = $this->call('getArticleLinkedAllLinkingTarget4', $paramsObject);
-
-        // Handle empty API result with invalid property value
-        if (sizeof($json->data) == 1 and is_string($json->data[0]->articleLinkages)) {
-            $json->data = [];
-        }
-
-        return $this->mapJsonToObject($json, new ArticleLinkedAllLinkingTarget4Response());
+        $json = $this->call('getArticles', $req);
+        return $this->mapJsonToObject($json, new ArticlesResponse());
     }
 
-    public function getArticleDirectSearchAllNumbersWithState(GetArticleDirectSearchAllNumbersWithState $paramsObject): ArticleDirectSearchAllNumbersWithStateResponse
+    public function getAutoCompleteSuggestions(AutoCompleteSuggestions $req): AutoCompleteSuggestionsResponse
     {
-        $json = $this->call('getArticleDirectSearchAllNumbersWithState', $paramsObject);
+        $json = $this->call('getAutoCompleteSuggestions', $req);
+        return $this->mapJsonToObject($json, new AutoCompleteSuggestionsResponse());
+    }
 
-        return $this->mapJsonToObject($json, new ArticleDirectSearchAllNumbersWithStateResponse());
+    /**
+     * @param GetBrands $req
+     * @return BrandsResponse
+     * @replaces
+     *  - getAmBrandAddress
+     *  - getAmBrands
+     */
+    public function getBrands(GetBrands $req): BrandsResponse
+    {
+        $json = $this->call('getBrands', $req);
+        return $this->mapJsonToObject($json, new BrandsResponse());
+    }
+
+    public function getChildNodesPattern(ChildNodesPattern $req): ChildNodesPatternResponse
+    {
+        $json = $this->call('getChildNodesPattern', $req);
+        return $this->mapJsonToObject($json, new ChildNodesPatternResponse());
+    }
+
+    public function getChildNodesPattern2(ChildNodesPattern2 $req): ChildNodesPattern2Response
+    {
+        $json = $this->call('getChildNodesPattern2', $req);
+        return $this->mapJsonToObject($json, new ChildNodesPattern2Response());
+    }
+
+    public function getCountries(Countries $req): CountriesResponse
+    {
+        $json = $this->call('getCountries', $req);
+        return $this->mapJsonToObject($json, new CountriesResponse());
+    }
+
+    public function getCountryGroups(CountryGroups $req): CountryGroupsResponse
+    {
+        $json = $this->call('getCountryGroups', $req);
+        return $this->mapJsonToObject($json, new CountryGroupsResponse());
+    }
+
+    public function getCriteriaDialogAttributs(CriteriaDialogAttributs $req): CriteriaDialogAttributsResponse
+    {
+        $json = $this->call('getCriteriaDialogAttributs', $req);
+        return $this->mapJsonToObject($json, new CriteriaDialogAttributsResponse());
+    }
+
+    public function getKeyValues(KeyValues $req): KeyValuesResponse
+    {
+        $json = $this->call('getKeyValues', $req);
+        return $this->mapJsonToObject($json, new KeyValuesResponse());
+    }
+
+    public function getLanguages(GetLanguages $paramsObject): LanguagesResponse
+    {
+        $json = $this->call('getLanguages', $paramsObject);
+        return $this->mapJsonToObject($json, new LanguagesResponse());
+    }
+
+    public function getLinkageTargets(GetLinkageTargets $req): LinkageTargets
+    {
+        $json = $this->call('getLinkageTargets', $req);
+        return $this->mapJsonToObject($json, new LinkageTargets());
+    }
+
+    public function getOEArticlesByVIN(GetOEArticlesByVIN $req): OEArticlesByVINResponse
+    {
+        $json = $this->call('getOEArticlesByVIN', $req);
+        return $this->mapJsonToObject($json, new OEArticlesByVINResponse());
+    }
+
+    public function getPartsByVINExt(GetPartsByVINExt $req): PartsByVINExt
+    {
+        $json = $this->call('getPartsByVINExt', $req);
+        return $this->mapJsonToObject($json, new PartsByVINExt());
+    }
+
+    public function getShortCuts2(GetShortCuts2 $req): ShortCuts2Response
+    {
+        $json = $this->call('getShortCuts2', $req);
+        return $this->mapJsonToObject($json, new ShortCuts2Response());
+    }
+
+    public function getVehicleDataByVINExt(GetVehicleDataByVINExt $req): VehicleDataByVINExt
+    {
+        $json = $this->call('getVehicleDataByVINExt', $req);
+        return $this->mapJsonToObject($json, new VehicleDataByVINExt());
+    }
+
+    public function getVehiclesByKeyNumberPlates(GetVehiclesByKeyNumberPlates $req): VehiclesByKeyNumberPlatesResponse
+    {
+        $json = $this->call('getVehiclesByKeyNumberPlates', $req);
+        return $this->mapJsonToObject($json, new VehiclesByKeyNumberPlatesResponse());
+    }
+
+    public function getVehiclesByVIN(GetVehiclesByVIN $req): VehiclesByVINResponse
+    {
+        $json = $this->call('getVehiclesByVIN', $req);
+        return $this->mapJsonToObject($json, new VehiclesByVINResponse());
+    }
+
+    public function getVendorIds2(GetVendorIds2 $req): VendorIds2Response
+    {
+        $json = $this->call('getVendorIds2', $req);
+        return $this->mapJsonToObject($json, new VendorIds2Response());
+    }
+
+    public function getVersion(GetVersionRequest $req): VersionResponse
+    {
+        $json = $this->call('getVersion', $req);
+        return $this->mapJsonToObject($json, new VersionResponse());
     }
 
     private function call(string $functionName, $paramsObject)
@@ -229,7 +401,6 @@ class Client
         }
 
         foreach ($obj as $p => $v) {
-
             if ($p === $propName and $v === $propValue) {
                 $obj->$p = $newValue;
             }

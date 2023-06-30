@@ -4,12 +4,39 @@ namespace Myrzan\TecDocClient\Generated\Request;
 
 class GetBrands
 {
+    /**
+     * @var string $articleCountry
+     */
     private string $articleCountry;
+
+    /**
+     * @var string $lang
+     */
     private string $lang;
+
+    /**
+     * @var int $provider
+     */
     private int $provider;
+
+    /**
+     * @var int|null $dataSupplierId
+     */
     private ?int $dataSupplierId;
+
+    /**
+     * @var bool $includeAll
+     */
     private bool $includeAll;
+
+    /**
+     * @var bool $includeAddressDetails
+     */
     private bool $includeAddressDetails;
+
+    /**
+     * @var bool $includeDataSupplierLogo
+     */
     private bool $includeDataSupplierLogo;
 
     /**

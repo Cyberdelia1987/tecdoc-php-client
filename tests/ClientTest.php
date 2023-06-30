@@ -3,7 +3,7 @@
 namespace Myrzan\TecDocClient\Tests;
 
 use Myrzan\TecDocClient\Client;
-use Myrzan\TecDocClient\Generated\Request\GetArticleLinkedAllLinkingTarget4;
+use Myrzan\TecDocClient\Generated\Request\ArticleLinkedAllLinkingTarget4;
 use Myrzan\TecDocClient\Generated\Request\GetArticleLinkedAllLinkingTargetsByIds3;
 use Myrzan\TecDocClient\Generated\Record\LinkedArticlePair;
 use Myrzan\TecDocClient\Generated\Request\GetAmBrands;
@@ -90,7 +90,7 @@ class ClientTest extends TestCase
 
     public function testGetArticleLinkedAllLinkingTarget4()
     {
-        $params = (new GetArticleLinkedAllLinkingTarget4())
+        $params = (new ArticleLinkedAllLinkingTarget4())
             ->setLang('de')
             ->setCountry('de')
             ->setArticleCountry('de')
@@ -105,7 +105,7 @@ class ClientTest extends TestCase
 
     public function testGetArticleLinkedAllLinkingTarget4_HandleEmptyResult()
     {
-        $params = (new GetArticleLinkedAllLinkingTarget4())
+        $params = (new ArticleLinkedAllLinkingTarget4())
             ->setLang('de')
             ->setCountry('de')
             ->setArticleCountry('de')

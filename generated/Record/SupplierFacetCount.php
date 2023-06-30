@@ -5,12 +5,11 @@ namespace Myrzan\TecDocClient\Generated\Record;
 /**
  * Class representing DataSupplierFacetCountType
  *
- * 
+ *
  * XSD Type: DataSupplierFacetCount
  */
-class DataSupplierFacetCount
+class SupplierFacetCount
 {
-
     /**
      * @var int $dataSupplierId
      */

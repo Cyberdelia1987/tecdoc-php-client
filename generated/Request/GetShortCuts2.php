@@ -8,9 +8,8 @@ namespace Myrzan\TecDocClient\Generated\Request;
  * 
  * XSD Type: shortCuts2Request
  */
-class ShortCuts2 
+class GetShortCuts2
 {
-
     /**
      * @var string $articleCountry
      */
