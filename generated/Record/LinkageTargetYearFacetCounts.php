@@ -23,4 +23,23 @@ class LinkageTargetYearFacetCounts
         return $this->count;
     }
 
+    /**
+     * @param int $year
+     * @return LinkageTargetYearFacetCounts
+     */
+    public function setYear(int $year): LinkageTargetYearFacetCounts
+    {
+        $this->year = $year;
+        return $this;
+    }
+
+    /**
+     * @param int $count
+     * @return LinkageTargetYearFacetCounts
+     */
+    public function setCount(int $count): LinkageTargetYearFacetCounts
+    {
+        $this->count = $count;
+        return $this;
+    }
 }
