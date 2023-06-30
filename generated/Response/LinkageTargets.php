@@ -19,37 +19,14 @@ class LinkageTargets
      */
     private array $linkageTargets;
 
-    /**
-     * @var MfrFacet[]
-     */
-    private array $mfrFacets;
-
-    /**
-     * @var VehicleModelSeriesFacet[]
-     */
-    private array $vehicleModelSeriesFacets;
-    /**
-     * @var HmdModelFacet[]
-     */
-    private array $hmdModelFacets;
-
-    /**
-     * @var YearFacet[]
-     */
-    private array $yearFacets;
-
-    /**
-     * @var DescriptionFacet[]
-     */
-    private array $descriptionFacets;
-
-    /**
-     * @var LinkageTargetTypeFacet[]
-     */
-    private array $linkageTargetTypeFacets;
+    private MfrFacet $mfrFacets;
+    private VehicleModelSeriesFacet $vehicleModelSeriesFacets;
+    private HmdModelFacet $hmdModelFacets;
+    private YearFacet $yearFacets;
+    private DescriptionFacet $descriptionFacets;
+    private LinkageTargetTypeFacet $linkageTargetTypeFacets;
     private int $status;
     private string $statusText;
-
     /**
      * @return int
      */
@@ -67,25 +44,35 @@ class LinkageTargets
     }
 
     /**
-     * @return array
+     * @param \Myrzan\TecDocClient\Generated\Record\LinkageTarget[] $linkageTargets
+     * @return LinkageTargets
      */
-    public function getMfrFacets(): array
+    public function setLinkageTargets(array $linkageTargets): LinkageTargets
+    {
+        $this->linkageTargets = $linkageTargets;
+        return $this;
+    }
+
+    /**
+     * @return MfrFacet
+     */
+    public function getMfrFacets(): MfrFacet
     {
         return $this->mfrFacets;
     }
 
     /**
-     * @return array
+     * @return VehicleModelSeriesFacet
      */
-    public function getVehicleModelSeriesFacets(): array
+    public function getVehicleModelSeriesFacets(): VehicleModelSeriesFacet
     {
         return $this->vehicleModelSeriesFacets;
     }
 
     /**
-     * @return array
+     * @return HmdModelFacet
      */
-    public function getHmdModelFacets(): array
+    public function getHmdModelFacets(): HmdModelFacet
     {
         return $this->hmdModelFacets;
     }
@@ -93,7 +80,7 @@ class LinkageTargets
     /**
      * @return array
      */
-    public function getYearFacets(): array
+    public function getYearFacets(): YearFacet
     {
         return $this->yearFacets;
     }
@@ -101,7 +88,7 @@ class LinkageTargets
     /**
      * @return array
      */
-    public function getDescriptionFacets(): array
+    public function getDescriptionFacets(): DescriptionFacet
     {
         return $this->descriptionFacets;
     }
@@ -109,7 +96,7 @@ class LinkageTargets
     /**
      * @return array
      */
-    public function getLinkageTargetTypeFacets(): array
+    public function getLinkageTargetTypeFacets(): LinkageTargetTypeFacet
     {
         return $this->linkageTargetTypeFacets;
     }
@@ -141,70 +128,60 @@ class LinkageTargets
     }
 
     /**
-     * @param array $linkageTargets
+     * @param \Myrzan\TecDocClient\Generated\Record\MfrFacet $mfrFacets
      * @return LinkageTargets
      */
-    public function setLinkageTargets(array $linkageTargets): LinkageTargets
-    {
-        $this->linkageTargets = $linkageTargets;
-        return $this;
-    }
-
-    /**
-     * @param array $mfrFacets
-     * @return LinkageTargets
-     */
-    public function setMfrFacets(array $mfrFacets): LinkageTargets
+    public function setMfrFacets(MfrFacet $mfrFacets): LinkageTargets
     {
         $this->mfrFacets = $mfrFacets;
         return $this;
     }
 
     /**
-     * @param array $vehicleModelSeriesFacets
+     * @param \Myrzan\TecDocClient\Generated\Record\VehicleModelSeriesFacet $vehicleModelSeriesFacets
      * @return LinkageTargets
      */
-    public function setVehicleModelSeriesFacets(array $vehicleModelSeriesFacets): LinkageTargets
+    public function setVehicleModelSeriesFacets(VehicleModelSeriesFacet $vehicleModelSeriesFacets): LinkageTargets
     {
         $this->vehicleModelSeriesFacets = $vehicleModelSeriesFacets;
         return $this;
     }
 
     /**
-     * @param array $hmdModelFacets
+     * @param \Myrzan\TecDocClient\Generated\Record\HmdModelFacet $hmdModelFacets
      * @return LinkageTargets
      */
-    public function setHmdModelFacets(array $hmdModelFacets): LinkageTargets
+    public function setHmdModelFacets(HmdModelFacet $hmdModelFacets): LinkageTargets
     {
         $this->hmdModelFacets = $hmdModelFacets;
         return $this;
     }
 
     /**
-     * @param array $yearFacets
+     * @param \Myrzan\TecDocClient\Generated\Record\YearFacet $yearFacets
      * @return LinkageTargets
      */
-    public function setYearFacets(array $yearFacets): LinkageTargets
+    public function setYearFacets(YearFacet $yearFacets): LinkageTargets
     {
         $this->yearFacets = $yearFacets;
         return $this;
     }
 
     /**
-     * @param array $descriptionFacets
+     * @param \Myrzan\TecDocClient\Generated\Record\DescriptionFacet $descriptionFacets
      * @return LinkageTargets
      */
-    public function setDescriptionFacets(array $descriptionFacets): LinkageTargets
+    public function setDescriptionFacets(DescriptionFacet $descriptionFacets): LinkageTargets
     {
         $this->descriptionFacets = $descriptionFacets;
         return $this;
     }
 
     /**
-     * @param array $linkageTargetTypeFacets
+     * @param \Myrzan\TecDocClient\Generated\Record\LinkageTargetTypeFacet $linkageTargetTypeFacets
      * @return LinkageTargets
      */
-    public function setLinkageTargetTypeFacets(array $linkageTargetTypeFacets): LinkageTargets
+    public function setLinkageTargetTypeFacets(LinkageTargetTypeFacet $linkageTargetTypeFacets): LinkageTargets
     {
         $this->linkageTargetTypeFacets = $linkageTargetTypeFacets;
         return $this;

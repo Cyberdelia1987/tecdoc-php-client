@@ -33,9 +33,7 @@ class ArticlesResponse
     /**
      * @var Article[] $articles
      */
-    private $articles = [
-        
-    ];
+    private $articles = [];
 
     /**
      * @var SupplierFacetCounts $dataSupplierFacets
@@ -123,9 +121,9 @@ class ArticlesResponse
      * Adds as articles
      *
      * @return self
-     * @param Article $articles
+     * @param \Myrzan\TecDocClient\Generated\Record\Article $articles
      */
-    public function addToArticles(Article $articles)
+    public function addToArticles(\Myrzan\TecDocClient\Generated\Record\Article $articles)
     {
         $this->articles[] = $articles;
         return $this;
@@ -166,7 +164,7 @@ class ArticlesResponse
     /**
      * Sets a new articles
      *
-     * @param Article[] $articles
+     * @param \Myrzan\TecDocClient\Generated\Record\Article[] $articles
      * @return self
      */
     public function setArticles(array $articles)
