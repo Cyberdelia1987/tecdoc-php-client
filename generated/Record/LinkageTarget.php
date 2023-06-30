@@ -38,8 +38,11 @@ class LinkageTarget
      * @var VehicleImage[]
      */
     private array $vehicleImages;
-    //KBA Number of the vehicle (if available)
-    private ?string $kbaNumbers;
+    /**
+     * KBA Number of the vehicle (if available)
+     * @var string[]|null $kbaNumbers
+     */
+    private ?array $kbaNumbers;
     //Drive Type Key (from Key Table 82)
     private ?int $driveTypeKey;
     //Drive Type Description (from Key Table 82)
@@ -648,10 +651,10 @@ class LinkageTarget
     }
 
     /**
-     * @param string|null $kbaNumbers
+     * @param string[]|null $kbaNumbers
      * @return LinkageTarget
      */
-    public function setKbaNumbers(?string $kbaNumbers): LinkageTarget
+    public function setKbaNumbers(?array $kbaNumbers): LinkageTarget
     {
         $this->kbaNumbers = $kbaNumbers;
         return $this;

@@ -25,4 +25,24 @@ class VehicleModelSeriesFacet
     {
         return $this->counts;
     }
+
+    /**
+     * @param int $total
+     * @return VehicleModelSeriesFacet
+     */
+    public function setTotal(int $total): VehicleModelSeriesFacet
+    {
+        $this->total = $total;
+        return $this;
+    }
+
+    /**
+     * @param LinkageTargetVehicleModelSeriesFacetCount[] $counts
+     * @return VehicleModelSeriesFacet
+     */
+    public function setCounts(array $counts): VehicleModelSeriesFacet
+    {
+        $this->counts = $counts;
+        return $this;
+    }
 }

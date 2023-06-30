@@ -1,7 +1,6 @@
 <?php
 
 namespace Myrzan\TecDocClient\Generated\Record;
-
 class LinkageTargetTypeFacetCount
 {
     private string $type;
@@ -21,5 +20,25 @@ class LinkageTargetTypeFacetCount
     public function getCount(): int
     {
         return $this->count;
+    }
+
+    /**
+     * @param string $type
+     * @return LinkageTargetTypeFacetCount
+     */
+    public function setType(string $type): LinkageTargetTypeFacetCount
+    {
+        $this->type = $type;
+        return $this;
+    }
+
+    /**
+     * @param int $count
+     * @return LinkageTargetTypeFacetCount
+     */
+    public function setCount(int $count): LinkageTargetTypeFacetCount
+    {
+        $this->count = $count;
+        return $this;
     }
 }

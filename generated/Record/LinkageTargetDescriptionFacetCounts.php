@@ -23,5 +23,23 @@ class LinkageTargetDescriptionFacetCounts
         return $this->count;
     }
 
+    /**
+     * @param string $description
+     * @return LinkageTargetDescriptionFacetCounts
+     */
+    public function setDescription(string $description): LinkageTargetDescriptionFacetCounts
+    {
+        $this->description = $description;
+        return $this;
+    }
 
+    /**
+     * @param int $count
+     * @return LinkageTargetDescriptionFacetCounts
+     */
+    public function setCount(int $count): LinkageTargetDescriptionFacetCounts
+    {
+        $this->count = $count;
+        return $this;
+    }
 }

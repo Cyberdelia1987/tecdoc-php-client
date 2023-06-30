@@ -37,7 +37,7 @@ class DescriptionFacet
     }
 
     /**
-     * @param array $counts
+     * @param LinkageTargetDescriptionFacetCounts[] $counts
      * @return DescriptionFacet
      */
     public function setCounts(array $counts): DescriptionFacet

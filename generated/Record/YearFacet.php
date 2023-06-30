@@ -26,4 +26,23 @@ class YearFacet
         return $this->counts;
     }
 
+    /**
+     * @param int $total
+     * @return YearFacet
+     */
+    public function setTotal(int $total): YearFacet
+    {
+        $this->total = $total;
+        return $this;
+    }
+
+    /**
+     * @param LinkageTargetYearFacetCounts[] $counts
+     * @return YearFacet
+     */
+    public function setCounts(array $counts): YearFacet
+    {
+        $this->counts = $counts;
+        return $this;
+    }
 }

@@ -37,7 +37,7 @@ class HmdModelFacet
     }
 
     /**
-     * @param array $counts
+     * @param LinkageTargetHMDModelFacetCount[] $counts
      * @return HmdModelFacet
      */
     public function setCounts(array $counts): HmdModelFacet
