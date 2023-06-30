@@ -306,7 +306,5 @@ class ArticlesResponse
         $this->assemblyGroupFacets = $assemblyGroupFacets;
         return $this;
     }
-
-
 }
 

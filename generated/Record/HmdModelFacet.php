@@ -25,4 +25,24 @@ class HmdModelFacet
     {
         return $this->counts;
     }
+
+    /**
+     * @param int $total
+     * @return HmdModelFacet
+     */
+    public function setTotal(int $total): HmdModelFacet
+    {
+        $this->total = $total;
+        return $this;
+    }
+
+    /**
+     * @param array $counts
+     * @return HmdModelFacet
+     */
+    public function setCounts(array $counts): HmdModelFacet
+    {
+        $this->counts = $counts;
+        return $this;
+    }
 }

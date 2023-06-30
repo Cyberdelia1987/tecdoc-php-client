@@ -243,7 +243,5 @@ class OEArticlesByVINResponse
         $this->statusText = $statusText;
         return $this;
     }
-
-
 }
 

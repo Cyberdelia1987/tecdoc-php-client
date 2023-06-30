@@ -13,4 +13,14 @@ class AxleBodyType
     {
         return $this->bodyTypeCode;
     }
+
+    /**
+     * @param string $bodyTypeCode
+     * @return AxleBodyType
+     */
+    public function setBodyTypeCode(string $bodyTypeCode): AxleBodyType
+    {
+        $this->bodyTypeCode = $bodyTypeCode;
+        return $this;
+    }
 }

@@ -345,9 +345,11 @@ class Client
     {
         if (is_array($object)) {
             $result = [];
-
             foreach ($object as $k => $v) {
-                $result[$k] = self::recursivelyTransformObjectToArray($v);
+                $transformedVal = self::recursivelyTransformObjectToArray($v);
+                if ($transformedVal !== null) {
+                    $result[$k] = $transformedVal;
+                }
             }
 
             return $result;
@@ -363,7 +365,11 @@ class Client
                         $property->setAccessible(true);
 
                         $propName = $property->getName();
-                        $result[$propName] = self::recursivelyTransformObjectToArray($property->getValue($object));
+                        $propVal = $property->isInitialized($object) ? $property->getValue($object) : $property->getDefaultValue();
+                        $transformedVal = self::recursivelyTransformObjectToArray($propVal);
+                        if ($transformedVal !== null) {
+                            $result[$propName] = $transformedVal;
+                        }
                     }
                 } while ($reflection = $reflection->getParentClass());
             } catch (\ReflectionException $e) {
