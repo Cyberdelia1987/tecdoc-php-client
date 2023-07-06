@@ -31,7 +31,7 @@ class ArticlesResponse
     private $maxAllowedPage = null;
 
     /**
-     * @var Article[] $articles
+     * @var \Myrzan\TecDocClient\Generated\Record\Article[] $articles
      */
     private $articles = [];
 
