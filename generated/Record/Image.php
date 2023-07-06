@@ -47,6 +47,20 @@ class Image extends Asset
     private $imageURL800 = null;
 
     /**
+     * Image URL for the 1600x1600 Version of the Image
+     *
+     * @var string $imageURL1600
+     */
+    private $imageURL1600 = null;
+
+    /**
+     * Image URL for the 3200x3200 Version of the Image
+     *
+     * @var string $imageURL3200
+     */
+    private $imageURL3200 = null;
+
+    /**
      * Gets as imageURL50
      *
      * Image URL for the 50x50 Version of the Image
@@ -167,12 +181,22 @@ class Image extends Asset
      *
      * Image URL for the 800x800 Version of the Image
      *
-     * @param string $imageURL800
+     * @param  string  $imageURL800
      * @return self
      */
     public function setImageURL800($imageURL800)
     {
         $this->imageURL800 = $imageURL800;
+        return $this;
+    }
+
+    /**
+     * @param  string  $imageURL1600
+     * @return self
+     */
+    public function setImageURL1600($imageURL1600): Image
+    {
+        $this->imageURL1600 = $imageURL1600;
         return $this;
     }
 
