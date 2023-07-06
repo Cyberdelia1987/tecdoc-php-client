@@ -191,6 +191,14 @@ class Image extends Asset
     }
 
     /**
+     * @return string|null
+     */
+    public function getImageURL1600(): ?string
+    {
+        return $this->imageURL1600;
+    }
+
+    /**
      * @param  string  $imageURL1600
      * @return self
      */
@@ -200,6 +208,23 @@ class Image extends Asset
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
+    public function getImageURL3200(): ?string
+    {
+        return $this->imageURL3200;
+    }
 
+    /**
+     * @param  string|null  $imageURL3200
+     *
+     * @return Image
+     */
+    public function setImageURL3200(?string $imageURL3200): Image
+    {
+        $this->imageURL3200 = $imageURL3200;
+        return $this;
+    }
 }
 
